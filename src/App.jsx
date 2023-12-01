@@ -17,11 +17,11 @@ function App() {
     const dispatch = useDispatch();
     const { url } = useSelector((state) => state.home);
     console.log(url);
-
+ 
     useEffect(() => {
         fetchApiConfig();
         genresCall();
-    }, []);
+    }, []); 
 
     const fetchApiConfig = () => {
         fetchDataFromApi("/configuration").then((res) => {
